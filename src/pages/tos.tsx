@@ -1,5 +1,5 @@
-export default function tos() {
+export default function Tos() {
   return (
-    <div>tos</div>
+    <div>Tos</div>
   )
 }

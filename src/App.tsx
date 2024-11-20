@@ -1,20 +1,14 @@
-import Button from './components/common/Button';
-import CheckBox from './components/common/CheckBox';
-import Footers from './components/layout/Footers/Footers';
-import MainHeaders from './components/layout/Headers/MainHeaders';
-import SubHeaders from './components/layout/Headers/SubHeaders';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Tos from './pages/tos';
+import PersonalInfo from './pages/personalInfo';
 
 export default function App() {
   return (
-    <>
-      <div>
-        <MainHeaders />
-        <SubHeaders text='text' />
-        <Button>안녕</Button>
-        <CheckBox size='sm' className='border-black' />
-
-        <Footers />
-      </div>
-    </>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/tos' element={<Tos/>}/>
+      <Route path='/personal-info' element={<PersonalInfo/>}/>
+    </Routes>
   );
 }
